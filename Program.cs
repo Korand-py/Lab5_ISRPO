@@ -244,15 +244,78 @@
 //         break;
 // }
 
-int sum = 0;
+// int sum = 0;
 
-for (int i = 0; i < 3; i++)
+// for (int i = 0; i < 3; i++)
+// {
+//     int num = Convert.ToInt32(Console.ReadLine());
+//     if (num > 0)
+//     {
+//         sum += num;
+//     }
+// }
+
+// Console.WriteLine(sum);
+
+Console.WriteLine("Лабиринт");
+Console.WriteLine("Вы стоите перед первой дверью. Перед вами два пути:");
+Console.WriteLine("A - Войти в комнату с огромным драконом");
+Console.WriteLine("B - Пойти по тёмному коридору");
+Console.Write("Ваш выбор (A/B): ");
+
+string choice = Console.ReadLine();
+
+switch (choice)
 {
-    int num = Convert.ToInt32(Console.ReadLine());
-    if (num > 0)
-    {
-        sum += num;
-    }
+    case "A":
+        Console.WriteLine("Вы входите в комнату с драконом...");
+        Console.WriteLine("Дракон говорит:");
+        Console.WriteLine("\"Кто не дышит, но живёт; хоть не нужно — много пьёт;");
+        Console.WriteLine(" и в жизни, и в смерти тело как лёд.\"");
+        Console.Write("Ваш ответ: ");
+
+        string answer = Console.ReadLine();
+
+        if (answer == "рыба" || answer == "рыба.")
+        {
+            Console.WriteLine("Правильно! Дракон открывает дверь в следующую комнату.");
+            Console.WriteLine("Вы нашли Dungeon Master'а и победили!");
+        }
+        else
+        {
+            Console.WriteLine("\nНеверно! Дракон съедает вас...");
+            Console.WriteLine("Игра окончена.");
+        }
+        break;
+
+    case "B":
+        Console.WriteLine("Вы идёте по тёмному коридору и входите в комнату с двумя дверями.");
+        Console.WriteLine("Дверь 1 - За ней скрыты сокровища Dungeon Master'а");
+        Console.WriteLine("Дверь 2 - За ней ловушка с ядовитыми шипами");
+        Console.Write("Какую дверь выберете (1/2): ");
+
+        string door = Console.ReadLine();
+
+        if (door == "1")
+        {
+            Console.WriteLine("Вы открываете дверь 1 и находите сокровища!");
+            Console.WriteLine("Вы победили!");
+        }
+        else if (door == "2")
+        {
+            Console.WriteLine("Вы открываете дверь 2... Ядовитые шипы!");
+            Console.WriteLine("Игра окончена.");
+        }
+        else
+        {
+            Console.WriteLine("Такой двери нет. Вы растерялись и погибли в темноте.");
+        }
+        break;
+
+    default:
+        Console.WriteLine("Вы не выбрали путь и остались стоять у двери навсегда... 💀");
+        break;
 }
 
-Console.WriteLine(sum);
+Console.WriteLine("Нажмите Enter для выхода...");
+Console.ReadLine();
