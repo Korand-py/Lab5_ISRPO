@@ -190,15 +190,25 @@
 // Console.WriteLine($"Правильно! Загаданное число: {secret}");
 // Console.WriteLine(result);
 
-int secret1 = Convert.ToInt32(Console.ReadLine());
+// int secret1 = Convert.ToInt32(Console.ReadLine());
 
-int secret2 = Convert.ToInt32(Console.ReadLine());
+// int secret2 = Convert.ToInt32(Console.ReadLine());
 
-if (secret1 == secret2)
+// if (secret1 == secret2)
+// {
+//     Console.WriteLine("Пароль принят!");
+// } else
+// {
+//     Console.WriteLine("Пароль не принят!");
+// }
+
+int age = Convert.ToInt32(Console.ReadLine());
+
+if (age >= 18)
 {
-    Console.WriteLine("Пароль принят!");
-} else
-{
-    Console.WriteLine("Пароль не принят!");
+    Console.WriteLine("Доступ разрешён!");
 }
-
+else
+{
+    Console.WriteLine("Доступ запрещён!");
+}
