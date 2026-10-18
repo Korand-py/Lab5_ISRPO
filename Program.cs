@@ -213,33 +213,46 @@
 //     Console.WriteLine("Доступ запрещён!");
 // }
 
-Console.WriteLine("Введите число a:");
-int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число a:");
+// int a = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите число b:");
-int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Введите число b:");
+// int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Введите операцию (+ - * /):");
-string o = Console.ReadLine();
+// Console.WriteLine("Введите операцию (+ - * /):");
+// string o = Console.ReadLine();
 
-switch (o)
+// switch (o)
+// {
+//     case "+":
+//         Console.WriteLine($"Результат: {a + b}");
+//         break;
+//     case "-":
+//         Console.WriteLine($"Результат: {a - b}");
+//         break;
+//     case "*":
+//         Console.WriteLine($"Результат: {a * b}");
+//         break;
+//     case "/":
+//         if (b == 0)
+//             Console.WriteLine("Ошибка: деление на ноль!");
+//         else
+//             Console.WriteLine($"Результат: {(double)a / b}");
+//         break;
+//     default:
+//         Console.WriteLine("Неизвестная операция");
+//         break;
+// }
+
+int sum = 0;
+
+for (int i = 0; i < 3; i++)
 {
-    case "+":
-        Console.WriteLine($"Результат: {a + b}");
-        break;
-    case "-":
-        Console.WriteLine($"Результат: {a - b}");
-        break;
-    case "*":
-        Console.WriteLine($"Результат: {a * b}");
-        break;
-    case "/":
-        if (b == 0)
-            Console.WriteLine("Ошибка: деление на ноль!");
-        else
-            Console.WriteLine($"Результат: {(double)a / b}");
-        break;
-    default:
-        Console.WriteLine("Неизвестная операция");
-        break;
+    int num = Convert.ToInt32(Console.ReadLine());
+    if (num > 0)
+    {
+        sum += num;
+    }
 }
+
+Console.WriteLine(sum);
